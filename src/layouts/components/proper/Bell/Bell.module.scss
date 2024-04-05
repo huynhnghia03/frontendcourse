@@ -1,0 +1,68 @@
+.bell {
+    width: 400px;
+    min-height: 114px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 -4px 32px rgba(0, 0, 0, .2);
+    color: #1d2129;
+    margin: 0;
+    padding-left: 0;
+    will-change: opacity, transform;
+}
+
+.bell-icon {
+
+    padding: 8px;
+    position: relative;
+    user-select: none;
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+.bell-heading {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+
+    h6 {
+        font-size: 1.8rem;
+        color: black;
+        margin: 0;
+        font-weight: 600;
+    }
+}
+
+.bell-content {
+    max-height: 70vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    p {
+        color: #666;
+        font-size: 1.4rem;
+        line-height: 18px;
+        padding: 8px 10px 16px;
+    }
+
+}
+
+.bell-content::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #e0dddd;
+}
+
+.bell-content::-webkit-scrollbar-thumb {
+    background: #b0acac;
+    border-radius: 3px;
+}
+
+@media screen and (max-width:980px) {
+    .bell {
+        width: 100%;
+        min-height: 100%;
+    }
+}

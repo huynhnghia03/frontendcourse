@@ -1,0 +1,42 @@
+.conversation:hover {
+    background: #80808038;
+    cursor: pointer;
+}
+
+.conversation {
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+.conversation>div {
+    position: relative;
+}
+
+.online-dot {
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: absolute;
+    left: 2rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.content-inner {
+    display: flex;
+}
+
+.name {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 10px;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .follower.conversation>div>.name {
+        display: none;
+    }
+}
