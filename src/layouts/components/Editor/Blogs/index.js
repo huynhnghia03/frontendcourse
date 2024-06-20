@@ -5,7 +5,6 @@ import classNames from "classnames/bind";
 import styles from './blogs.module.scss'
 import './newBlog.css'
 import { memo } from "react";
-import { Parser } from 'html-to-react'
 import { uploadimage } from "../../../../API/blogRequest";
 // import { updateImage } from "../../../../../API/userRequest";
 

@@ -16,7 +16,7 @@ import { useState } from 'react';
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styles from './disscussDetail.module.scss'
 import NewFeedButton from '../../layouts/components/NewFeed/NFButton';
-import ChatBox from '../../layouts/components/ChatBox';
+// import ChatBox from '../../layouts/components/ChatBox';
 import { createReactBlog, getDetailBlog } from "../../API/blogRequest";
 import TimeAgo from 'timeago-react';
 import * as timeago from 'timeago.js';
@@ -352,7 +352,7 @@ function DisscussDetail() {
             </div>
         </section>
         <NewFeedButton />
-        <ChatBox />
+        {/* <ChatBox /> */}
         <ToastContainer />
         <CommentBlog detailData={detailBlog} />
     </>

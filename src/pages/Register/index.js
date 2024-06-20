@@ -14,6 +14,7 @@ import Button from '../../layouts/components/Button';
 import { StoreContext } from '../../store';
 import { RegisterMedthod, LoginOauth } from '../../API/authRequest';
 import { auth, providerFacebook, providerGithub, providerGoogle } from '../../config/firebase';
+import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 const cx = classNames.bind(styles)
 
 function Register() {
@@ -27,7 +28,6 @@ function Register() {
     const [state, setState] = useState(true)
     const handleState = () => {
         setState(false)
-
     }
     const msg = {}
     const ValidatAll = () => {
@@ -275,17 +275,17 @@ function Register() {
                             </div>
 
                             <div className={cx('sigin-button')} onClick={signInGoogle}>
-                                <img alt='logo' className={cx('icon')} src='https://accounts.fullstack.edu.vn/assets/images/signin/google-18px.svg' />
+                                <FontAwesomeIcon className={cx('icon')} icon={faGoogle} />
                                 <span className={cx('text')}>Tiếp tục với Google</span>
                             </div>
 
                             <div className={cx('sigin-button')} onClick={signInFaceBook}>
-                                <img alt='logo' className={cx('icon')} src='https://accounts.fullstack.edu.vn/assets/images/signin/facebook-18px.svg' />
+                                <FontAwesomeIcon className={cx('icon')} icon={faFacebook} />
                                 <span className={cx('text')}>Tiếp tục với FaceBook</span>
                             </div>
 
                             <div className={cx('sigin-button')} onClick={signInGitHub}>
-                                <img alt='logo' className={cx('icon')} src='https://accounts.fullstack.edu.vn/assets/images/signin/github-18px.svg' />
+                                <FontAwesomeIcon className={cx('icon')} icon={faGithub} />
                                 <span className={cx('text')}>Tiếp tục với GitHub</span>
                             </div>
                         </div>) : (<form>

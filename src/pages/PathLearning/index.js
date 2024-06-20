@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../layouts/components/Button';
 import english from '../../assets/image/english.png'
 import robot from '../../assets/image/robot.png'
-import ChatBox from '../../layouts/components/ChatBox';
+// import ChatBox from '../../layouts/components/ChatBox';
 const cx = classNames.bind(styles)
 
 
@@ -184,7 +184,7 @@ function PathLearning() {
             </div>
         </div>
     </section>
-        <ChatBox />
+        {/* <ChatBox /> */}
     </>
 }
 export default PathLearning

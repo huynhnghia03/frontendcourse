@@ -2,7 +2,7 @@ import styles from './BackEnd.module.scss'
 import classNames from "classnames/bind";
 import { Link } from 'react-router-dom';
 import { JS } from '../../assets/image';
-import ChatBox from '../../layouts/components/ChatBox';
+// import ChatBox from '../../layouts/components/ChatBox';
 
 const cx = classNames.bind(styles)
 
@@ -81,7 +81,7 @@ function BackEnd() {
                 </section>
             </div>
         </section>
-        <ChatBox />
+        {/* <ChatBox /> */}
     </>
     )
 

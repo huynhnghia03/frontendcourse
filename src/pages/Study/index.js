@@ -8,7 +8,7 @@ import robot from '../../assets/image/robot.png'
 import ConfigRoutes from '../../config/routes'
 import styles from './Study.module.scss'
 import NewFeedButton from '../../layouts/components/NewFeed/NFButton';
-import ChatBox from '../../layouts/components/ChatBox';
+// import ChatBox from '../../layouts/components/ChatBox';
 import { logo } from '../../assets/image';
 import { getAllTopics } from "../../API/courses_TopicsRequest";
 const cx = classNames.bind(styles)
@@ -239,7 +239,7 @@ function Study() {
         </div>
     </section>
         <NewFeedButton />
-        <ChatBox />
+        {/* <ChatBox /> */}
     </>
 }
 export default Study

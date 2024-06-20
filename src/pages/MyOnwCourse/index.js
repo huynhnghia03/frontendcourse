@@ -10,7 +10,7 @@ import * as timeago from 'timeago.js';
 //eslint-disable-next-line
 import vi from 'timeago.js/lib/lang/vi';
 import NewFeedButton from '../../layouts/components/NewFeed/NFButton';
-import ChatBox from '../../layouts/components/ChatBox';
+// import ChatBox from '../../layouts/components/ChatBox';
 import { logo } from '../../assets/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
@@ -122,7 +122,7 @@ function MyOwnCourse() {
         </div>
     </section>
         <NewFeedButton />
-        <ChatBox />
+        {/* <ChatBox /> */}
         <ToastContainer />
     </>
 }

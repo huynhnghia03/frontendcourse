@@ -15,6 +15,7 @@ import Button from '../../layouts/components/Button'
 import ForgetPassWord from '../ForgetPassWord'
 import { LoginMedthod, LoginOauth } from '../../API/authRequest'
 import { auth, providerFacebook, providerGithub, providerGoogle } from '../../config/firebase'
+import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 const cx = classNames.bind(styles)
 
@@ -265,17 +266,20 @@ function Login() {
                                 </div>
 
                                 <div className={cx('sigin-button')} onClick={signInGoogle}>
-                                    <img className={cx('icon')} src='https://accounts.fullstack.edu.vn/assets/images/signin/google-18px.svg' alt='Google' />
+                                    <FontAwesomeIcon className={cx('icon')} icon={faGoogle} />
+                                    {/* <img className={cx('icon')} src={faGoogle} alt='Google' /> */}
                                     <span className={cx('text')}>Tiếp tục với Google</span>
                                 </div>
 
                                 <div className={cx('sigin-button')} onClick={signInFaceBook}>
-                                    <img className={cx('icon')} src='https://accounts.fullstack.edu.vn/assets/images/signin/facebook-18px.svg' alt='Facebook' />
+                                    <FontAwesomeIcon className={cx('icon')} icon={faFacebook} />
+                                    {/* <img className={cx('icon')} src={faFacebook} alt='Facebook' /> */}
                                     <span className={cx('text')}>Tiếp tục với FaceBook</span>
                                 </div>
 
                                 <div className={cx('sigin-button')} onClick={signInGitHub}>
-                                    <img className={cx('icon')} src='https://accounts.fullstack.edu.vn/assets/images/signin/github-18px.svg' alt='Github' />
+                                    <FontAwesomeIcon className={cx('icon')} icon={faGithub} />
+                                    {/* <img className={cx('icon')} src={} alt='Github' /> */}
                                     <span className={cx('text')}>Tiếp tục với GitHub</span>
                                 </div>
                                 <p className={cx('noAccount')}>

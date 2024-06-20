@@ -2,7 +2,7 @@
 import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faBookOpenReader, faCircleExclamation, faFileSignature, faPen, faGear, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import styles from './BarMenu.module.scss'
 import ConfigRoutes from '../../../../config/routes'
@@ -12,15 +12,11 @@ const cx = classNames.bind(styles)
 
 function BarMenu() {
     const user = JSON.parse(localStorage.getItem('currentUser'))
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const handleLogout = () => {
         localStorage.removeItem('token');
         window.location.href = '/login';
     }
-
-
-
-
     const context = useContext(StoreContext)
     return (
         context.barmenu && <div className={cx('model', context.barmenu ? ("") : ("closing"))}>

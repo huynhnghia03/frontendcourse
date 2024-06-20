@@ -13,7 +13,6 @@ import { logo } from '../../assets/image';
 import styles from './sliderShow.module.scss'
 import NewFeedButton from '../../layouts/components/NewFeed/NFButton';
 import GoTop from '../../layouts/components/GoTop';
-import ChatBox from '../../layouts/components/ChatBox'
 import { getAllTopics } from '../../API/courses_TopicsRequest';
 const cx = classNames.bind(styles)
 
@@ -351,7 +350,6 @@ function Home() {
                 </div>
             </section>
             <GoTop />
-            <ChatBox />
             <NewFeedButton />
 
         </>

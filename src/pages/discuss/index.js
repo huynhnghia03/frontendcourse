@@ -21,7 +21,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './Disscuss.module.scss'
 import NewFeedButton from '../../layouts/components/NewFeed/NFButton';
-import ChatBox from '../../layouts/components/ChatBox';
+// import ChatBox from '../../layouts/components/ChatBox';
 import { getAllBlogs } from "../../API/blogRequest";
 import { createLoveBlog } from "../../API/loveBlogRequest";
 
@@ -315,7 +315,7 @@ function Disscuss() {
             </div>
         </section>
         <NewFeedButton />
-        <ChatBox />
+        {/* <ChatBox /> */}
         <ToastContainer />
     </>
     )
