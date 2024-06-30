@@ -322,12 +322,12 @@ function Comment() {
     }
     //socket io comment
     useEffect(() => {
-
+        console.log("oookokookokko")
         if (searchPar.get('id')) {
             console.log('vo', searchPar.get('id'))
-            socket.current = io(process.env.REACT_APP_SOCKET_URL, {
-                transports: ['websocket', 'polling']
-            })
+            socket.current = io("http://localhost:8800")
+            console.log(socket.current)
+            console.log('vo13', searchPar.get('id'))
             socket.current.emit('add-new-comment', searchPar.get('id'))
         }
         // eslint-disable-next-line
