@@ -325,7 +325,9 @@ function Comment() {
 
         if (searchPar.get('id')) {
             console.log('vo', searchPar.get('id'))
-            socket.current = io(process.env.REACT_APP_SOCKET_URL)
+            socket.current = io(process.env.REACT_APP_SOCKET_URL, {
+                transports: ['websocket', 'polling']
+            })
             socket.current.emit('add-new-comment', searchPar.get('id'))
         }
         // eslint-disable-next-line
