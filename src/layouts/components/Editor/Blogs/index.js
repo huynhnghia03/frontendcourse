@@ -19,8 +19,6 @@ class MyUploadAdapter {
     upload() {
         return this.loader.file.then(file => {
             return new Promise(async (resolve, reject) => {
-                // Simulate an image upload to your server.
-                console.log(file, "ok")
                 try {
                     const format = new FormData()
                     format.append('image', file)
@@ -34,13 +32,6 @@ class MyUploadAdapter {
                 } catch {
                     reject('error')
                 }
-                // setTimeout(() => {
-                //     console.log()
-                //     const response = {
-                //         default: file.name, // URL of the uploaded image
-                //     };
-                //     resolve(response);
-                // }, 2000); // Simulate a 2-second delay (replace with actual server upload code)
             });
         });
     }
