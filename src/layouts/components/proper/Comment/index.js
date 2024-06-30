@@ -325,8 +325,7 @@ function Comment() {
         console.log("oookokookokko")
         if (searchPar.get('id')) {
             console.log('vo', searchPar.get('id'))
-            socket.current = io("https://socketsever-nghias-projects-bb8cbafb.vercel.app")
-            console.log(socket.current)
+            socket.current = io(process.env.REACT_APP_SOCKET_URL)
             console.log('vo13', searchPar.get('id'))
             socket.current.emit('add-new-comment', searchPar.get('id'))
         }
