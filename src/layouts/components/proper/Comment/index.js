@@ -325,7 +325,11 @@ function Comment() {
         console.log("oookokookokko")
         if (searchPar.get('id')) {
             console.log('vo', searchPar.get('id'))
-            socket.current = io(process.env.REACT_APP_SOCKET_URL)
+            socket.current = io(process.env.REACT_APP_SOCKET_URL, {
+                secure: true,
+                reconnection: true,
+                rejectUnauthorized: false
+            })
             console.log('vo13', socket)
             socket.current.emit('add-new-comment', searchPar.get('id'))
         }
