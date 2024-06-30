@@ -23,6 +23,7 @@ function Register() {
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [rePass, setRePass] = useState('')
+    const [disButton, setDisButton] = useState(false)
     const [errMessageOauth, setErrMessageOauth] = useState('')
     const [validateMsg, setValidateMsg] = useState({})
     const [state, setState] = useState(true)
@@ -115,6 +116,7 @@ function Register() {
         else {
             try {
                 e.preventDefault()
+                setDisButton(true)
                 const datas = {
                     name,
                     email,
@@ -387,7 +389,7 @@ function Register() {
                                     </div>
 
                                 </div>
-                                <Button primary onClick={hanldSubmit} className={cx('sumbnt')} id='bnt-submit'>
+                                <Button primary onClick={hanldSubmit} className={cx('sumbnt')} disable={disButton} id='bnt-submit'>
                                     <div className={cx('inner', 'module-inner')}><span className={cx('module-text')}>Đăng ký</span></div>
                                 </Button>
                             </div>
