@@ -389,7 +389,7 @@ function Register() {
                                     </div>
 
                                 </div>
-                                <Button primary onClick={hanldSubmit} className={cx('sumbnt', disButton ? '' : 'disable')} id='bnt-submit'>
+                                <Button primary onClick={hanldSubmit} className={cx('sumbnt', disButton ? 'disable' : '')} id='bnt-submit'>
                                     <div className={cx('inner', 'module-inner')}><span className={cx('module-text')}>Đăng ký</span></div>
                                 </Button>
                             </div>

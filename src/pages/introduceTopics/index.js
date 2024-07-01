@@ -14,7 +14,7 @@ const cx = classNames.bind(styles)
 
 function IntroduceTopic() {
     const [showListCourse, setShowListCourse] = useState(true)
-    const [disButton, setDisButton] = useState(true)
+    const [disButton, setDisButton] = useState(false)
     const [courses, setCourses] = useState([])
     // const topics = JSON.parse(localStorage.getItem('AllCourses'))
     const [amountOfCourse, setAmountOfCourse] = useState(0)
@@ -62,7 +62,7 @@ function IntroduceTopic() {
 
     const hanldeReigisterTopic = async (id) => {
         try {
-            setDisButton(false)
+            setDisButton(true)
             const { data } = await registedTopic(id)
             if (data.success === 1) {
                 toast.success("Đăng ký thành công", {
