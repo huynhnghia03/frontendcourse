@@ -14,6 +14,7 @@ const cx = classNames.bind(styles)
 
 function IntroduceTopic() {
     const [showListCourse, setShowListCourse] = useState(true)
+    const [disButton, setDisButton] = useState(true)
     const [courses, setCourses] = useState([])
     // const topics = JSON.parse(localStorage.getItem('AllCourses'))
     const [amountOfCourse, setAmountOfCourse] = useState(0)
@@ -52,30 +53,21 @@ function IntroduceTopic() {
                 })
             }
         }
-        // if ([...topics.english, ...topics.topics].find((course) => course.slug === slug).is_resgister) {
-        //     navigate({
-        //         pathname: '/Learning/' + slug
-        //     })
-        // } else {
         if (slug) {
             getcourseDetail(slug)
         }
         // }
         // eslint-disable-next-line
     }, [slug])
-    // useEffect(() => {
-    //     if ([...topics.english, ...topics.topics].find((course) => course.slug === slug).is_resgister) {
-
-    //     }
-    // }, [])
 
     const hanldeReigisterTopic = async (id) => {
         try {
+            setDisButton(false)
             const { data } = await registedTopic(id)
             if (data.success === 1) {
                 toast.success("Đăng ký thành công", {
                     position: "top-center",
-                    autoClose: 1000,
+                    autoClose: 900,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -87,7 +79,7 @@ function IntroduceTopic() {
                     navigate({
                         pathname: '/Learning/' + slug
                     })
-                }, 1500)
+                }, 1000)
 
             }
 
@@ -180,7 +172,7 @@ function IntroduceTopic() {
                             <h5>Miễn Phí</h5>
                             {!localStorage.getItem('token') ?
                                 <Button primary to={ConfigRoutes.Login}>Đăng ký ngay</Button> :
-                                <Button primary onClick={() => hanldeReigisterTopic(topic._id)}>Đăng ký ngay</Button>
+                                <Button primary onClick={() => hanldeReigisterTopic(topic._id)} disable={disButton}>Đăng ký ngay</Button>
                             }
                             <ul className={cx('participation', 'listOfTech')}>
                                 <li><FontAwesomeIcon className={cx('icon')} icon={faGaugeHigh} /><span>Trình độ cơ bản</span></li>
