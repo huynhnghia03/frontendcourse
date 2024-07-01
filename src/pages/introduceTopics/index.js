@@ -61,13 +61,33 @@ function IntroduceTopic() {
     }, [slug])
 
     const hanldeReigisterTopic = async (id) => {
-        try {
-            setDisButton(true)
-            const { data } = await registedTopic(id)
-            if (data.success === 1) {
-                toast.success("Đăng ký thành công", {
+        if (!disButton) {
+            try {
+                setDisButton(true)
+                const { data } = await registedTopic(id)
+                if (data.success === 1) {
+                    toast.success("Đăng ký thành công", {
+                        position: "top-center",
+                        autoClose: 900,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    })
+                    setTimeout(() => {
+                        navigate({
+                            pathname: '/Learning/' + slug
+                        })
+                    }, 1000)
+
+                }
+
+            } catch {
+                toast.error("Lỗi server", {
                     position: "top-center",
-                    autoClose: 900,
+                    autoClose: 2000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -75,25 +95,9 @@ function IntroduceTopic() {
                     progress: undefined,
                     theme: "light",
                 })
-                setTimeout(() => {
-                    navigate({
-                        pathname: '/Learning/' + slug
-                    })
-                }, 1000)
-
             }
-
-        } catch {
-            toast.error("Lỗi server", {
-                position: "top-center",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            })
+        } else {
+            return
         }
     }
 
